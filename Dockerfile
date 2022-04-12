@@ -4,7 +4,6 @@ WORKDIR /src
 COPY go.* ./
 RUN go mod download
 COPY *.go ./
-RUN go get golang.org/x/crypto/acme/autocert
 RUN go build ./
 
 FROM alpine:latest
